@@ -32,7 +32,7 @@ while True:
     # 更新缓冲区
     buffer.append(len(faces) > 0)
 
-    # 如果检测到人且连续检测到人脸且停留时间超过一秒，执行相应操作
+    # 如果检测到人且连续检测到人脸且停留时间超过0.3秒，执行相应操作
     if sum(buffer) >= len(buffer) and (time.time() - start_time) > 0.3:
         print("Detected person for more than 1 second!")
         # windows弹窗提醒
